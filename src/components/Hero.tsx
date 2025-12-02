@@ -12,7 +12,7 @@ const Hero = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2025-12-14T05:30:00").getTime();
+    const targetDate = new Date("2026-03-01T05:30:00").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -57,15 +57,15 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-primary-foreground/95 text-lg">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-primary-foreground/95 text-xl lg:text-2xl">
             <div className="flex items-center gap-2">
-              <Calendar className="w-6 h-6 text-primary" />
-              <span className="font-semibold">14 December 2025</span>
+              <Calendar className="w-7 h-7 text-primary" />
+              <span className="font-bold">01 March 2026</span>
             </div>
             <div className="hidden sm:block w-1 h-1 bg-primary rounded-full" />
             <div className="flex items-center gap-2">
-              <MapPin className="w-6 h-6 text-primary" />
-              <span className="font-semibold">Jawaharlal Nehru Stadium, New Delhi</span>
+              <MapPin className="w-7 h-7 text-primary" />
+              <span className="font-bold">Jawaharlal Nehru Stadium, New Delhi</span>
             </div>
           </div>
 
