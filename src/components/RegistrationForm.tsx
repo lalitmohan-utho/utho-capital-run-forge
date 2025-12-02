@@ -29,6 +29,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
+import { Calendar, MapPin } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -75,8 +76,22 @@ export default function RegistrationForm({ children }: RegistrationFormProps) {
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold">Race Registration</DialogTitle>
-          <DialogDescription>
-            Fill in your details to register for The Capital Run 2026
+          <DialogDescription className="space-y-3">
+            <div>Fill in your details to register for The Capital Run 2026</div>
+            <div className="flex items-center gap-4 text-sm">
+              <div className="flex items-center gap-1">
+                <Calendar className="w-4 h-4 text-primary" />
+                <span className="font-semibold">1 March 2026</span>
+              </div>
+              <span>-</span>
+              <div className="flex items-center gap-1">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span className="font-semibold">Jawaharlal Nehru Stadium, New Delhi</span>
+              </div>
+            </div>
+            <div className="inline-block bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+              Super early bird – save up to 50% till 31 December 2025
+            </div>
           </DialogDescription>
         </DialogHeader>
 
@@ -137,10 +152,46 @@ export default function RegistrationForm({ children }: RegistrationFormProps) {
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="21km">21 KM - Half Marathon (Age 16+)</SelectItem>
-                      <SelectItem value="10km">10 KM - Impact Run (Age 16+)</SelectItem>
-                      <SelectItem value="5km">5 KM - Speed Run (Age 14+)</SelectItem>
-                      <SelectItem value="2.5km">2.5 KM - Fun Run (Open for all)</SelectItem>
+                      <SelectItem value="21km">
+                        <div className="flex flex-col py-1">
+                          <span className="font-semibold">21 KM - Half Marathon (Age 16+)</span>
+                          <div className="flex items-center gap-2 text-xs mt-1">
+                            <span className="line-through text-muted-foreground">₹1,999</span>
+                            <span className="font-bold text-primary">₹999</span>
+                            <span className="text-muted-foreground">(save 50%)</span>
+                          </div>
+                        </div>
+                      </SelectItem>
+                      <SelectItem value="10km">
+                        <div className="flex flex-col py-1">
+                          <span className="font-semibold">10 KM - Impact Run (Age 16+)</span>
+                          <div className="flex items-center gap-2 text-xs mt-1">
+                            <span className="line-through text-muted-foreground">₹1,499</span>
+                            <span className="font-bold text-primary">₹749</span>
+                            <span className="text-muted-foreground">(save 50%)</span>
+                          </div>
+                        </div>
+                      </SelectItem>
+                      <SelectItem value="5km">
+                        <div className="flex flex-col py-1">
+                          <span className="font-semibold">5 KM - Speed Run (Age 14+)</span>
+                          <div className="flex items-center gap-2 text-xs mt-1">
+                            <span className="line-through text-muted-foreground">₹999</span>
+                            <span className="font-bold text-primary">₹499</span>
+                            <span className="text-muted-foreground">(save 50%)</span>
+                          </div>
+                        </div>
+                      </SelectItem>
+                      <SelectItem value="2.5km">
+                        <div className="flex flex-col py-1">
+                          <span className="font-semibold">2.5 KM - Fun Run (Open for all)</span>
+                          <div className="flex items-center gap-2 text-xs mt-1">
+                            <span className="line-through text-muted-foreground">₹799</span>
+                            <span className="font-bold text-primary">₹399</span>
+                            <span className="text-muted-foreground">(save 50%)</span>
+                          </div>
+                        </div>
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />

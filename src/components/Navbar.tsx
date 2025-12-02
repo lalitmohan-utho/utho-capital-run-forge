@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import capitalRunLogo from "@/assets/capital-run-logo.png";
+import RegistrationForm from "./RegistrationForm";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,9 +55,11 @@ const Navbar = () => {
                 {link.label}
               </button>
             ))}
-            <Button variant="hero" size="lg">
-              Register Now
-            </Button>
+            <RegistrationForm>
+              <Button variant="hero" size="lg">
+                Register Now
+              </Button>
+            </RegistrationForm>
           </div>
 
           <button
@@ -80,9 +83,11 @@ const Navbar = () => {
                 {link.label}
               </button>
             ))}
-            <Button variant="hero" size="lg" className="w-full">
-              Register Now
-            </Button>
+            <RegistrationForm>
+              <Button variant="hero" size="lg" className="w-full">
+                Register Now
+              </Button>
+            </RegistrationForm>
           </div>
         </div>
       )}
