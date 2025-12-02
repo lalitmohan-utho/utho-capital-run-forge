@@ -13,11 +13,11 @@ const FAQ = () => {
     },
     {
       question: "When and where can I collect my race bib?",
-      answer: "Bib collection will be available at Jawaharlal Nehru Stadium on 12th and 13th December 2025, from 10 AM to 6 PM. Please bring a valid ID and your registration confirmation.",
+      answer: "Bib collection will be available at Jawaharlal Nehru Stadium on 27th and 28th February 2026, from 10 AM to 6 PM. Please bring a valid ID and your registration confirmation.",
     },
     {
       question: "What are the age criteria for different categories?",
-      answer: "21 KM Half Marathon: 18+, 10 KM Impact Run: 16+, 5 KM Speed Run: 14+, 2.5 KM Fun Run: Open to all ages. Age will be calculated as on the event date (14 December 2025).",
+      answer: "21 KM Half Marathon: 16+, 10 KM Impact Run: 16+, 5 KM Speed Run: 14+, 2.5 KM Fun Run: Open to all ages. Age will be calculated as on the event date (1 March 2026).",
     },
     {
       question: "What safety protocols are in place?",

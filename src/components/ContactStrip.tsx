@@ -2,10 +2,18 @@ import { Mail } from "lucide-react";
 
 const ContactStrip = () => {
   return (
-    <section className="py-12 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10">
+    <section className="py-16 bg-gradient-to-r from-primary/20 via-accent/15 to-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 hover:shadow-orange transition-smooth">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-3">
+            Get in <span className="text-primary">Touch</span>
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            For registrations and partnerships
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="bg-primary/10 border-2 border-primary/30 rounded-xl p-8 hover:shadow-orange hover:border-primary transition-smooth">
             <div className="flex items-start gap-4">
               <div className="p-3 rounded-lg bg-primary/10">
                 <Mail className="w-6 h-6 text-primary" />
@@ -25,7 +33,7 @@ const ContactStrip = () => {
             </div>
           </div>
 
-          <div className="bg-accent/5 border border-accent/20 rounded-xl p-6 hover:shadow-lg hover:shadow-accent/20 transition-smooth">
+          <div className="bg-accent/10 border-2 border-accent/30 rounded-xl p-8 hover:shadow-lg hover:shadow-accent/20 hover:border-accent transition-smooth">
             <div className="flex items-start gap-4">
               <div className="p-3 rounded-lg bg-accent/10">
                 <Mail className="w-6 h-6 text-accent" />
