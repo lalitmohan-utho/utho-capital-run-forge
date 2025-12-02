@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import capitalRunLogo from "@/assets/capital-run-logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,6 +28,7 @@ const Navbar = () => {
     { label: "Categories", id: "categories" },
     { label: "Sustainability", id: "sustainability" },
     { label: "Experience", id: "experience" },
+    { label: "Partners", id: "sponsors" },
     { label: "FAQ", id: "faq" },
   ];
 
@@ -39,9 +41,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex items-center gap-2">
-            <div className="text-2xl font-bold">
-              <span className="text-primary">The Capital Run</span>
-            </div>
+            <img src={capitalRunLogo} alt="The Capital Run" className="h-12 lg:h-14" />
           </div>
 
           <div className="hidden md:flex items-center gap-8">
