@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Trophy, Clock, Users, Target } from "lucide-react";
+import RegistrationForm from "./RegistrationForm";
 
 const RaceCategories = () => {
   const categories = [
@@ -95,9 +96,11 @@ const RaceCategories = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="lg" className="text-lg px-12 py-6 h-auto">
-            Register Now
-          </Button>
+          <RegistrationForm>
+            <Button variant="hero" size="lg" className="text-lg px-12 py-6 h-auto">
+              Register Now
+            </Button>
+          </RegistrationForm>
         </div>
       </div>
     </section>
