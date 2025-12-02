@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Download } from "lucide-react";
 import heroBanner from "@/assets/hero-banner.jpg";
+import RegistrationForm from "./RegistrationForm";
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -86,9 +87,11 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button variant="hero" size="lg" className="text-lg px-10 py-6 h-auto">
-              Register Now
-            </Button>
+            <RegistrationForm>
+              <Button variant="hero" size="lg" className="text-lg px-10 py-6 h-auto">
+                Register Now
+              </Button>
+            </RegistrationForm>
             <Button variant="outline" size="lg" className="text-lg px-10 py-6 h-auto bg-background/20 backdrop-blur-sm border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-secondary">
               <Download className="w-5 h-5 mr-2" />
               Event Brochure
