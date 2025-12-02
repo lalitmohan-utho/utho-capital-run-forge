@@ -99,10 +99,12 @@ const Hero = () => {
                 Register Now
               </Button>
             </RegistrationForm>
-            <Button variant="outline" size="lg" className="text-lg px-10 py-6 h-auto bg-background/20 backdrop-blur-sm border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-secondary">
-              <Download className="w-5 h-5 mr-2" />
-              Event Brochure
-            </Button>
+            <a href="/The_Capital_Run.pdf" download="The Capital Run.pdf">
+              <Button variant="outline" size="lg" className="text-lg px-10 py-6 h-auto bg-background/20 backdrop-blur-sm border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-secondary">
+                <Download className="w-5 h-5 mr-2" />
+                Event Brochure
+              </Button>
+            </a>
           </div>
 
           <p className="text-primary-foreground/70 text-base italic pt-4">
