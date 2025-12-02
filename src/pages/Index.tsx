@@ -8,6 +8,7 @@ import FinishLine from "@/components/FinishLine";
 import Sponsors from "@/components/Sponsors";
 import TeamRegistration from "@/components/TeamRegistration";
 import FAQ from "@/components/FAQ";
+import ContactStrip from "@/components/ContactStrip";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -23,6 +24,7 @@ const Index = () => {
       <Sponsors />
       <TeamRegistration />
       <FAQ />
+      <ContactStrip />
       <Footer />
     </div>
   );
