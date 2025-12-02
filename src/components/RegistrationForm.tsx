@@ -76,23 +76,25 @@ export default function RegistrationForm({ children }: RegistrationFormProps) {
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold">Race Registration</DialogTitle>
-          <DialogDescription className="space-y-3">
-            <div>Fill in your details to register for The Capital Run 2026</div>
-            <div className="flex items-center gap-4 text-sm">
-              <div className="flex items-center gap-1">
-                <Calendar className="w-4 h-4 text-primary" />
-                <span className="font-semibold">1 March 2026</span>
-              </div>
-              <span>-</span>
-              <div className="flex items-center gap-1">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span className="font-semibold">Jawaharlal Nehru Stadium, New Delhi</span>
-              </div>
-            </div>
-            <div className="inline-block bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
-              Super early bird – save up to 50% till 31 December 2025
-            </div>
+          <DialogDescription>
+            Fill in your details to register for The Capital Run 2026
           </DialogDescription>
+          <div className="flex items-center gap-4 text-sm pt-3">
+            <div className="flex items-center gap-1">
+              <Calendar className="w-4 h-4 text-primary" />
+              <span className="font-semibold text-foreground">1 March 2026</span>
+            </div>
+            <span className="text-muted-foreground">-</span>
+            <div className="flex items-center gap-1">
+              <MapPin className="w-4 h-4 text-primary" />
+              <span className="font-semibold text-foreground">Jawaharlal Nehru Stadium, New Delhi</span>
+            </div>
+          </div>
+          <div className="pt-2">
+            <span className="inline-block bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+              Super early bird – save up to 50% till 31 December 2025
+            </span>
+          </div>
         </DialogHeader>
 
         <Form {...form}>
