@@ -58,15 +58,22 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-primary-foreground/95 text-xl lg:text-2xl">
-            <div className="flex items-center gap-2">
-              <Calendar className="w-7 h-7 text-primary" />
-              <span className="font-bold">01 March 2026</span>
+          <div className="space-y-3">
+            <div className="flex flex-wrap items-center justify-center gap-6 text-primary-foreground/95 text-xl lg:text-2xl">
+              <div className="flex items-center gap-2">
+                <Calendar className="w-7 h-7 text-primary" />
+                <span className="font-bold">1 March 2026</span>
+              </div>
+              <div className="hidden sm:block w-1 h-1 bg-primary rounded-full" />
+              <div className="flex items-center gap-2">
+                <MapPin className="w-7 h-7 text-primary" />
+                <span className="font-bold">Jawaharlal Nehru Stadium, New Delhi</span>
+              </div>
             </div>
-            <div className="hidden sm:block w-1 h-1 bg-primary rounded-full" />
-            <div className="flex items-center gap-2">
-              <MapPin className="w-7 h-7 text-primary" />
-              <span className="font-bold">Jawaharlal Nehru Stadium, New Delhi</span>
+            <div className="flex justify-center">
+              <span className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
+                Super early bird – save up to 50% till 31 December 2025
+              </span>
             </div>
           </div>
 

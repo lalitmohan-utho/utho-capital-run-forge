@@ -13,6 +13,8 @@ const RaceCategories = () => {
       startTime: "5:30 AM",
       highlight: "Prizes: Cash awards + finisher medals",
       gradient: "hero-gradient",
+      originalPrice: "₹1,999",
+      earlyBirdPrice: "₹999",
     },
     {
       icon: Target,
@@ -22,6 +24,8 @@ const RaceCategories = () => {
       startTime: "6:30 AM",
       highlight: "Prizes: Cash awards + finisher medals",
       gradient: "tech-gradient",
+      originalPrice: "₹1,499",
+      earlyBirdPrice: "₹749",
     },
     {
       icon: Clock,
@@ -31,6 +35,8 @@ const RaceCategories = () => {
       startTime: "7:00 AM",
       highlight: "Prizes: Cash awards + finisher medals",
       gradient: "green-gradient",
+      originalPrice: "₹999",
+      earlyBirdPrice: "₹499",
     },
     {
       icon: Users,
@@ -40,6 +46,8 @@ const RaceCategories = () => {
       startTime: "7:30 AM",
       highlight: "Prizes: Finisher medal",
       gradient: "hero-gradient",
+      originalPrice: "₹799",
+      earlyBirdPrice: "₹399",
     },
   ];
 
@@ -85,6 +93,12 @@ const RaceCategories = () => {
 
                 <div className="pt-2 border-t border-border">
                   <p className="text-sm font-medium text-accent">{category.highlight}</p>
+                </div>
+
+                <div className="pt-2 space-y-1">
+                  <p className="text-sm text-muted-foreground line-through">{category.originalPrice}</p>
+                  <p className="text-lg font-bold text-primary">{category.earlyBirdPrice}</p>
+                  <p className="text-xs text-muted-foreground">Super early bird till 31 December 2025 – save 50%</p>
                 </div>
 
                 <Button variant="outline" className="w-full group-hover:border-primary group-hover:text-primary">

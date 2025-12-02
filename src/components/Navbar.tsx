@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex items-center gap-2">
-            <img src={capitalRunLogo} alt="The Capital Run" className="h-12 lg:h-14" />
+            <img src={capitalRunLogo} alt="The Capital Run" className="h-14 lg:h-20" />
           </div>
 
           <div className="hidden md:flex items-center gap-8">
