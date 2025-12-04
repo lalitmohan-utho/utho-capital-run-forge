@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Capital Run – Powered by Utho | Running Towards Innovation</title>
-    <meta name="description" content="Join India's purpose-driven marathon on 14 December 2025 at Jawaharlal Nehru Stadium, New Delhi. Where fitness meets technology and passion meets purpose.">
+    <meta name="description" content="Join India's purpose-driven marathon on 1 March 2026 at Jawaharlal Nehru Stadium, New Delhi. Where fitness meets technology and passion meets purpose.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -13,14 +13,15 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <img src="https://whfiseivcoehtlsfvtts.supabase.co/storage/v1/object/public/assets/capital-run-logo.png" alt="The Capital Run Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <img src="capital-run-logo.png" alt="The Capital Run Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <span style="display:none; font-weight: 800; font-size: 1.25rem; color: #f97316;">THE CAPITAL RUN</span>
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="#about" onclick="scrollToSection('about')">About</a>
                 <a href="#categories" onclick="scrollToSection('categories')">Categories</a>
                 <a href="#sustainability" onclick="scrollToSection('sustainability')">Sustainability</a>
-                <a href="#sponsors" onclick="scrollToSection('sponsors')">Sponsors</a>
+                <a href="#experience" onclick="scrollToSection('experience')">Experience</a>
+                <a href="#sponsors" onclick="scrollToSection('sponsors')">Partners</a>
                 <a href="#faq" onclick="scrollToSection('faq')">FAQ</a>
             </div>
             <button class="register-btn" onclick="openRegistrationModal()">Register Now</button>
@@ -37,76 +38,141 @@
         <a href="#about" onclick="scrollToSection('about'); toggleMobileMenu();">About</a>
         <a href="#categories" onclick="scrollToSection('categories'); toggleMobileMenu();">Categories</a>
         <a href="#sustainability" onclick="scrollToSection('sustainability'); toggleMobileMenu();">Sustainability</a>
-        <a href="#sponsors" onclick="scrollToSection('sponsors'); toggleMobileMenu();">Sponsors</a>
+        <a href="#experience" onclick="scrollToSection('experience'); toggleMobileMenu();">Experience</a>
+        <a href="#sponsors" onclick="scrollToSection('sponsors'); toggleMobileMenu();">Partners</a>
         <a href="#faq" onclick="scrollToSection('faq'); toggleMobileMenu();">FAQ</a>
         <button class="register-btn" onclick="openRegistrationModal(); toggleMobileMenu();">Register Now</button>
     </div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+        <div class="hero-bg" style="background-image: url('hero-banner.jpg');"></div>
         <div class="hero-overlay"></div>
+        <div class="hero-radial"></div>
         <div class="hero-content">
-            <p class="hero-tagline">Running Towards Innovation</p>
-            <h1 class="hero-title">THE CAPITAL RUN</h1>
-            <p class="hero-subtitle">Powered by UTHO</p>
+            <h1 class="hero-title">Running Towards<br><span class="text-orange pulse">Innovation</span></h1>
+            <p class="hero-subtitle">Where fitness meets technology, and passion meets purpose.</p>
+            
             <div class="hero-details">
-                <p>📅 1 March 2026</p>
-                <p>📍 Jawaharlal Nehru Stadium, New Delhi</p>
-            </div>
-            <div class="countdown" id="countdown">
-                <div class="countdown-item">
-                    <span class="countdown-number" id="days">00</span>
-                    <span class="countdown-label">Days</span>
+                <div class="detail-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>1 March 2026</span>
                 </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="hours">00</span>
-                    <span class="countdown-label">Hours</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="minutes">00</span>
-                    <span class="countdown-label">Minutes</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="seconds">00</span>
-                    <span class="countdown-label">Seconds</span>
+                <div class="detail-dot"></div>
+                <div class="detail-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span>Jawaharlal Nehru Stadium, New Delhi</span>
                 </div>
             </div>
+            
+            <div class="early-bird-badge">
+                Super early bird – save up to 50% till 31 December 2025
+            </div>
+
+            <div class="countdown-box">
+                <p class="countdown-label">Event Starts In</p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number-box">
+                            <span class="countdown-number" id="days">00</span>
+                        </div>
+                        <span class="countdown-unit">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number-box">
+                            <span class="countdown-number" id="hours">00</span>
+                        </div>
+                        <span class="countdown-unit">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number-box">
+                            <span class="countdown-number" id="minutes">00</span>
+                        </div>
+                        <span class="countdown-unit">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number-box">
+                            <span class="countdown-number" id="seconds">00</span>
+                        </div>
+                        <span class="countdown-unit">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="hero-buttons">
                 <button class="btn-primary" onclick="openRegistrationModal()">Register Now</button>
-                <a href="The_Capital_Run.pdf" download class="btn-secondary">Download Brochure</a>
+                <a href="The_Capital_Run.pdf" download class="btn-secondary">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7,10 12,15 17,10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Event Brochure
+                </a>
             </div>
+            <p class="hero-tagline">Be a catalyst for health, tech, and a greener tomorrow.</p>
         </div>
+        <div class="hero-gradient-bottom"></div>
     </section>
 
     <!-- Why Run With Us -->
     <section class="why-run" id="about">
         <div class="container">
-            <h2 class="section-title">Why Run With Us?</h2>
-            <p class="section-subtitle">More than a race – a movement combining fitness, technology, and purpose</p>
+            <h2 class="section-title">Why Run <span class="text-orange">With Us?</span></h2>
+            <p class="section-subtitle">More than a race – it's a movement</p>
             <div class="reasons-grid">
-                <div class="reason-card" style="--accent-color: #f97316;">
-                    <div class="reason-icon">🏃</div>
-                    <span class="reason-number">01</span>
-                    <h3>Purpose-Driven</h3>
-                    <p>Every step you take contributes to a greater cause. Run for innovation, sustainability, and community impact.</p>
+                <div class="reason-card">
+                    <div class="reason-number">01</div>
+                    <div class="reason-icon-box">
+                        <svg class="reason-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h3>Health Boost</h3>
+                    <p>Promote fitness, wellness, and an active lifestyle.</p>
                 </div>
-                <div class="reason-card" style="--accent-color: #22c55e;">
-                    <div class="reason-icon">🌱</div>
-                    <span class="reason-number">02</span>
-                    <h3>Eco-Friendly</h3>
-                    <p>India's greenest marathon with zero-waste initiatives, recyclable materials, and carbon offset programs.</p>
+                <div class="reason-card">
+                    <div class="reason-number">02</div>
+                    <div class="reason-icon-box">
+                        <svg class="reason-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Experience a movement built on open-source tech and cloud innovation.</p>
                 </div>
-                <div class="reason-card" style="--accent-color: #3b82f6;">
-                    <div class="reason-icon">💡</div>
-                    <span class="reason-number">03</span>
-                    <h3>Tech-Powered</h3>
-                    <p>Experience cutting-edge timing systems, real-time tracking, and AI-powered race insights.</p>
+                <div class="reason-card">
+                    <div class="reason-number">03</div>
+                    <div class="reason-icon-box">
+                        <svg class="reason-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Be One of Us</h3>
+                    <p>Join a mission-led runner community running for Bharat's future.</p>
                 </div>
-                <div class="reason-card" style="--accent-color: #a855f7;">
-                    <div class="reason-icon">🎯</div>
-                    <span class="reason-number">04</span>
-                    <h3>World-Class Experience</h3>
-                    <p>Premium race kits, professional photography, live entertainment, and celebration zones.</p>
+                <div class="reason-card green">
+                    <div class="reason-number">04</div>
+                    <div class="reason-icon-box green">
+                        <svg class="reason-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22c6.23-.05 7.87-5.57 7.5-10-.36-4.34-3.95-9.96-7.5-10-3.55.04-7.14 5.66-7.5 10-.37 4.43 1.27 9.95 7.5 10z"></path>
+                            <path d="M12 22V8"></path>
+                            <path d="M9 5c0 3 3 3 3 3s3 0 3-3"></path>
+                        </svg>
+                    </div>
+                    <h3>Green Impact</h3>
+                    <p>Support eco-friendly, zero-waste race systems with every step.</p>
                 </div>
             </div>
         </div>
@@ -115,114 +181,265 @@
     <!-- Race Categories -->
     <section class="categories" id="categories">
         <div class="container">
-            <h2 class="section-title">Race Categories</h2>
-            <p class="section-subtitle">Choose your challenge – from elite runners to first-timers</p>
+            <h2 class="section-title">Choose Your <span class="text-orange">Challenge</span></h2>
+            <p class="section-subtitle">Four distances, one mission – Find your pace, push your limits</p>
             <div class="categories-grid">
-                <div class="category-card featured">
-                    <div class="category-badge">Most Popular</div>
-                    <div class="category-icon">🏅</div>
-                    <h3>21 KM</h3>
-                    <p class="category-name">Half Marathon</p>
-                    <p class="category-age">Age: 18+ years</p>
-                    <p class="category-time">Start: 5:00 AM</p>
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon-box orange">
+                            <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"></polyline>
+                            </svg>
+                        </div>
+                        <div class="category-distance">21 KM</div>
+                    </div>
+                    <h3>Half Marathon</h3>
+                    <p class="category-age">Age: 16+</p>
+                    <div class="category-time">
+                        <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        Start: 5:30 AM
+                    </div>
+                    <p class="category-highlight">Prizes: Cash awards + finisher medals</p>
                     <div class="category-pricing">
                         <span class="original-price">₹1,999</span>
                         <span class="discounted-price">₹999</span>
                     </div>
-                    <p class="early-bird">Super Early Bird - Save 50%</p>
+                    <p class="early-bird-text">Super early bird till 31 December 2025 – save 50%</p>
+                    <button class="btn-outline">Know More</button>
                 </div>
+
                 <div class="category-card">
-                    <div class="category-icon">🎯</div>
-                    <h3>10 KM</h3>
-                    <p class="category-name">Impact Run</p>
-                    <p class="category-age">Age: 15+ years</p>
-                    <p class="category-time">Start: 6:00 AM</p>
+                    <div class="category-header">
+                        <div class="category-icon-box dark">
+                            <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="category-distance">10 KM</div>
+                    </div>
+                    <h3>Impact Run</h3>
+                    <p class="category-age">Age: 16+</p>
+                    <div class="category-time">
+                        <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        Start: 6:30 AM
+                    </div>
+                    <p class="category-highlight">Prizes: Cash awards + finisher medals</p>
                     <div class="category-pricing">
                         <span class="original-price">₹1,499</span>
                         <span class="discounted-price">₹749</span>
                     </div>
-                    <p class="early-bird">Super Early Bird - Save 50%</p>
+                    <p class="early-bird-text">Super early bird till 31 December 2025 – save 50%</p>
+                    <button class="btn-outline">Know More</button>
                 </div>
+
                 <div class="category-card">
-                    <div class="category-icon">⚡</div>
-                    <h3>5 KM</h3>
-                    <p class="category-name">Speed Run</p>
-                    <p class="category-age">Age: 12+ years</p>
-                    <p class="category-time">Start: 6:30 AM</p>
+                    <div class="category-header">
+                        <div class="category-icon-box green">
+                            <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12,6 12,12 16,14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="category-distance">5 KM</div>
+                    </div>
+                    <h3>Speed Run</h3>
+                    <p class="category-age">Age: 14+</p>
+                    <div class="category-time">
+                        <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        Start: 7:00 AM
+                    </div>
+                    <p class="category-highlight">Prizes: Cash awards + finisher medals</p>
                     <div class="category-pricing">
                         <span class="original-price">₹999</span>
                         <span class="discounted-price">₹499</span>
                     </div>
-                    <p class="early-bird">Super Early Bird - Save 50%</p>
+                    <p class="early-bird-text">Super early bird till 31 December 2025 – save 50%</p>
+                    <button class="btn-outline">Know More</button>
                 </div>
+
                 <div class="category-card">
-                    <div class="category-icon">🎉</div>
-                    <h3>2.5 KM</h3>
-                    <p class="category-name">Fun Run</p>
-                    <p class="category-age">Age: All ages</p>
-                    <p class="category-time">Start: 7:00 AM</p>
+                    <div class="category-header">
+                        <div class="category-icon-box orange">
+                            <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="category-distance">2.5 KM</div>
+                    </div>
+                    <h3>Fun Run</h3>
+                    <p class="category-age">Age: Open for all</p>
+                    <div class="category-time">
+                        <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        Start: 7:30 AM
+                    </div>
+                    <p class="category-highlight">Prizes: Finisher medal</p>
                     <div class="category-pricing">
                         <span class="original-price">₹799</span>
                         <span class="discounted-price">₹399</span>
                     </div>
-                    <p class="early-bird">Super Early Bird - Save 50%</p>
+                    <p class="early-bird-text">Super early bird till 31 December 2025 – save 50%</p>
+                    <button class="btn-outline">Know More</button>
                 </div>
             </div>
             <div class="register-section">
                 <button class="btn-primary large" onclick="openRegistrationModal()">Register Now</button>
-                <p class="offer-text">Early bird offer valid till 31 December 2025</p>
             </div>
         </div>
     </section>
 
     <!-- Sustainability -->
     <section class="sustainability" id="sustainability">
+        <div class="sustainability-bg"></div>
         <div class="container">
-            <h2 class="section-title">Run Clean, Run Green</h2>
-            <p class="section-subtitle">Our commitment to a sustainable future</p>
+            <h2 class="section-title">Run <span class="text-green">Clean</span>, Run <span class="text-green">Green</span></h2>
+            <p class="section-subtitle">Every stride towards sustainability counts</p>
             <div class="pledges-grid">
                 <div class="pledge-card">
-                    <div class="pledge-icon">♻️</div>
-                    <h3>Zero Waste</h3>
-                    <p>100% recyclable race materials and zero single-use plastics throughout the event.</p>
+                    <div class="pledge-icon-box">
+                        <svg class="pledge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>BYOB (Bring Your Own Bottle)</h3>
+                    <p>Eliminate single-use plastics — refill stations available every 2 KM.</p>
                 </div>
                 <div class="pledge-card">
-                    <div class="pledge-icon">🌳</div>
-                    <h3>Carbon Neutral</h3>
-                    <p>We offset all carbon emissions through tree plantation and renewable energy initiatives.</p>
+                    <div class="pledge-icon-box">
+                        <svg class="pledge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="3,6 5,6 6,20 18,20 19,6 21,6"></polyline>
+                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                            <path d="M5 6l1-4h12l1 4"></path>
+                        </svg>
+                    </div>
+                    <h3>Smart Waste Disposal</h3>
+                    <p>Color-coded bins across the venue for effective waste segregation.</p>
                 </div>
                 <div class="pledge-card">
-                    <div class="pledge-icon">💧</div>
-                    <h3>Water Conservation</h3>
-                    <p>Eco-friendly hydration stations with paper cups and water refill points.</p>
+                    <div class="pledge-icon-box">
+                        <svg class="pledge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>Eco-Friendly Race Kits</h3>
+                    <p>Designed with sustainable packaging and minimal plastic.</p>
                 </div>
                 <div class="pledge-card">
-                    <div class="pledge-icon">🚲</div>
-                    <h3>Green Transport</h3>
-                    <p>Encouraging public transport and providing cycling parking at the venue.</p>
+                    <div class="pledge-icon-box">
+                        <svg class="pledge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 16v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                    </div>
+                    <h3>Leave Only Footprints</h3>
+                    <p>Commit to a greener, healthier planet through responsible running.</p>
                 </div>
             </div>
             <div class="green-commitment">
-                <h3>🌿 Our Green Commitment</h3>
-                <p>The Capital Run is committed to being India's most environmentally responsible marathon. We aim for zero waste to landfill, with all materials being recycled, composted, or repurposed. Join us in running towards a greener future.</p>
+                <h3>Our Green Commitment</h3>
+                <p>The Capital Run is proud to be a zero-waste event. Together, we're not just running for fitness – we're running for a sustainable future for generations to come.</p>
             </div>
         </div>
     </section>
 
     <!-- Race Experience -->
-    <section class="experience">
+    <section class="experience" id="experience">
+        <div class="experience-bg"></div>
         <div class="container">
-            <h2 class="section-title">Race Day Experience</h2>
-            <p class="section-subtitle">World-class amenities for every runner</p>
+            <h2 class="section-title light">Race Day <span class="text-orange">Experience</span></h2>
+            <p class="section-subtitle light">World-class facilities and support every step of the way</p>
             <div class="features-grid">
-                <div class="feature-item">⏱️ Chip Timing System</div>
-                <div class="feature-item">📸 Professional Photography</div>
-                <div class="feature-item">🚑 Medical Support</div>
-                <div class="feature-item">💧 Hydration Stations</div>
-                <div class="feature-item">🎵 Live Entertainment</div>
-                <div class="feature-item">🏥 Physio Support</div>
-                <div class="feature-item">🎒 Baggage Counter</div>
-                <div class="feature-item">🍌 Energy Stations</div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <p>RFID-enabled bibs for perfect timing</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <p>Medical and emergency support units</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                        </svg>
+                    </div>
+                    <p>Hydration zones every 2 KM</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <p>Refreshment Zone at the venue</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <p>Bag counter for safe storage</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <p>Live results via SMS + digital screens</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="2"></circle>
+                            <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path>
+                        </svg>
+                    </div>
+                    <p>Route marshals & safety volunteers</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <p>Cheer zones for motivation</p>
+                </div>
             </div>
         </div>
     </section>
@@ -230,34 +447,52 @@
     <!-- Finish Line -->
     <section class="finish-line">
         <div class="container">
-            <h2 class="section-title">Finish Line Celebration</h2>
+            <h2 class="section-title">Finish Line <span class="text-orange">Celebration</span></h2>
             <p class="section-subtitle">Every finisher is a champion</p>
             <div class="perks-grid">
                 <div class="perk-card">
-                    <div class="perk-icon">🏅</div>
-                    <h3>Finisher Medal</h3>
-                    <p>Premium custom-designed medal for all finishers</p>
+                    <div class="perk-icon-box orange">
+                        <svg class="perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Finisher Medals</h3>
+                    <p>High-quality custom medals for all eligible finishers.</p>
                 </div>
                 <div class="perk-card">
-                    <div class="perk-icon">👕</div>
-                    <h3>Race T-Shirt</h3>
-                    <p>Exclusive event t-shirt in your race kit</p>
+                    <div class="perk-icon-box dark">
+                        <svg class="perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Recovery Zone</h3>
+                    <p>Foam rollers, physiotherapists, and assisted stretching.</p>
                 </div>
                 <div class="perk-card">
-                    <div class="perk-icon">📜</div>
-                    <h3>E-Certificate</h3>
-                    <p>Digital certificate with your official timing</p>
+                    <div class="perk-icon-box green">
+                        <svg class="perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Digital Finisher Certificates</h3>
+                    <p>Instantly downloadable post-event.</p>
                 </div>
             </div>
-            <div class="highlights">
+            <div class="highlights-box">
                 <h3>Event Highlights</h3>
-                <ul>
-                    <li>✓ Live DJ & Entertainment</li>
-                    <li>✓ Photo Booth</li>
-                    <li>✓ Recovery Zone</li>
-                    <li>✓ Food Court</li>
-                    <li>✓ Award Ceremony</li>
-                </ul>
+                <div class="highlights-grid">
+                    <div class="highlight-item"><span class="dot"></span>Warmup sessions with certified trainers</div>
+                    <div class="highlight-item"><span class="dot"></span>Celebrity runners & sports icons</div>
+                    <div class="highlight-item"><span class="dot"></span>Live DJ stage & high-energy music</div>
+                    <div class="highlight-item"><span class="dot"></span>Photo booths & marathon walls</div>
+                    <div class="highlight-item"><span class="dot"></span>Drone photography coverage</div>
+                    <div class="highlight-item"><span class="dot"></span>Post-race refreshments & meals</div>
+                </div>
             </div>
         </div>
     </section>
@@ -265,49 +500,62 @@
     <!-- Sponsors -->
     <section class="sponsors" id="sponsors">
         <div class="container">
-            <h2 class="section-title">Our Partners</h2>
-            <p class="section-subtitle">Backed by industry leaders</p>
-            <div class="sponsor-tiers">
-                <div class="sponsor-tier">
-                    <h3>Title Sponsor</h3>
-                    <div class="sponsor-logo large">UTHO</div>
-                </div>
-                <div class="sponsor-tier">
-                    <h3>Gold Sponsors</h3>
-                    <div class="sponsor-logos">
-                        <div class="sponsor-logo">Partner 1</div>
-                        <div class="sponsor-logo">Partner 2</div>
-                    </div>
+            <h2 class="section-title">Fuel the Run. <span class="text-orange">Power the Nation.</span></h2>
+            <p class="section-subtitle">Partner with Purpose</p>
+            <div class="sponsor-main">
+                <div class="sponsor-badge">Lead Technology Partner</div>
+                <div class="sponsor-name">UTHO</div>
+                <p class="sponsor-tagline">Cloud Innovation Platform</p>
+                <div class="sponsor-quote">
+                    <p>"Utho proudly presents The Capital Run 2025 — India's purpose-driven marathon where fitness, innovation, and sustainability unite. This December, let's run for health, run for technology, and run for Bharat."</p>
                 </div>
             </div>
             <div class="sponsor-cta">
-                <h3>Become a Sponsor</h3>
-                <p>Partner with India's most innovative marathon</p>
-                <a href="Sponsorship_Deck.pdf" download class="btn-secondary">Download Sponsorship Deck</a>
+                <a href="Sponsorship_Deck.pdf" download class="btn-primary">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7,10 12,15 17,10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Sponsorship Deck
+                </a>
+                <p class="sponsor-cta-text">Join us in building India's most innovative marathon</p>
+            </div>
+            <div class="partner-placeholders">
+                <div class="partner-box">Partner 1</div>
+                <div class="partner-box">Partner 2</div>
+                <div class="partner-box">Partner 3</div>
+                <div class="partner-box">Partner 4</div>
             </div>
         </div>
     </section>
 
     <!-- Team Registration -->
     <section class="team-registration">
+        <div class="team-bg"></div>
         <div class="container">
-            <h2 class="section-title">Run Together. Build Together.</h2>
-            <p class="section-subtitle">Special packages for corporate teams and running groups</p>
+            <div class="team-icon-circle">
+                <svg class="team-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+            </div>
+            <h2 class="section-title">Run <span class="text-orange">Together</span>. Build <span class="text-green">Together</span>.</h2>
+            <p class="section-subtitle">Bring your team, company, or community. Experience the power of collective achievement and make a lasting impact together.</p>
             <div class="team-benefits">
-                <div class="benefit">
-                    <span class="benefit-icon">👥</span>
+                <div class="team-benefit">
                     <h3>Team Discounts</h3>
-                    <p>Special pricing for groups of 10+</p>
+                    <p>Special rates for groups of 10+</p>
                 </div>
-                <div class="benefit">
-                    <span class="benefit-icon">🎽</span>
+                <div class="team-benefit">
                     <h3>Custom Bibs</h3>
-                    <p>Personalized race bibs with company logo</p>
+                    <p>Branded race numbers for your team</p>
                 </div>
-                <div class="benefit">
-                    <span class="benefit-icon">🏢</span>
+                <div class="team-benefit">
                     <h3>Corporate Packages</h3>
-                    <p>VIP hospitality and branding opportunities</p>
+                    <p>Complete event solutions</p>
                 </div>
             </div>
             <button class="btn-primary large" onclick="openRegistrationModal()">Register Your Team</button>
@@ -317,52 +565,79 @@
     <!-- FAQ -->
     <section class="faq" id="faq">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Everything you need to know</p>
+            <h2 class="section-title">Frequently Asked <span class="text-orange">Questions</span></h2>
+            <p class="section-subtitle">Everything you need to know about The Capital Run</p>
             <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        How do I register for the race?
+                        How do I register for the event?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Click the "Register Now" button on this page to access our registration form. You'll need to provide your personal details, select your race category, and complete the payment. You'll receive a confirmation email with your registration details.</p>
+                        <p>Click the 'Register Now' button on this page and complete the online registration form. You'll receive a confirmation email with your unique registration ID and further instructions.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        What is included in the registration fee?
+                        When and where can I collect my race bib?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Your registration includes: Race bib with timing chip, event t-shirt, finisher medal, e-certificate, access to hydration stations, baggage counter service, and post-race refreshments.</p>
+                        <p>Bib collection will be available at Jawaharlal Nehru Stadium on 27th and 28th February 2026, from 10 AM to 6 PM. Please bring a valid ID and your registration confirmation.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        Where and when do I collect my race kit?
+                        What are the age criteria for different categories?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Race kit collection (Expo) will be held on 28-29 February 2026 at the Jawaharlal Nehru Stadium. You must bring a valid photo ID and your registration confirmation to collect your kit. Kits cannot be collected on race day.</p>
+                        <p>21 KM Half Marathon: 16+, 10 KM Impact Run: 16+, 5 KM Speed Run: 14+, 2.5 KM Fun Run: Open to all ages. Age will be calculated as on the event date (1 March 2026).</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        Can I transfer my registration to someone else?
+                        What safety protocols are in place?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, registration transfers are allowed until 15 February 2026. A transfer fee of ₹200 applies. Please contact us at Registrations@thecapitalrun.com for transfer requests.</p>
+                        <p>We have medical support units stationed every 2 KM, ambulances on standby, trained first-aid volunteers, and emergency response teams. All participants are covered under event insurance.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        What are the cut-off times for each category?
+                        What is the refund and transfer policy?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Cut-off times: 21 KM - 3.5 hours, 10 KM - 2 hours, 5 KM - 1 hour, 2.5 KM - 45 minutes. Participants who exceed the cut-off time will be required to move to the footpath and may not receive official timing.</p>
+                        <p>Registrations are non-refundable but can be transferred to another person up to 7 days before the event. Please contact our support team for transfer requests.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Where can I find the route map?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The detailed route map will be shared via email 7 days before the event and will be available on our website. All routes are certified and start/finish at Jawaharlal Nehru Stadium.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Is parking available at the venue?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, designated parking areas will be available at the stadium. We recommend carpooling or using public transport. Detailed parking information will be sent before the event.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How many hydration and aid stations will be there?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Hydration stations are placed every 2 KM along all routes. We encourage BYOB (Bring Your Own Bottle) to reduce plastic waste. Refill stations will have water and electrolyte drinks.</p>
                     </div>
                 </div>
             </div>
@@ -372,18 +647,34 @@
     <!-- Contact Strip -->
     <section class="contact-strip">
         <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
+            <h2 class="section-title">Get in <span class="text-orange">Touch</span></h2>
             <p class="section-subtitle">For registrations and partnerships</p>
-            <div class="contact-cards">
-                <div class="contact-card">
-                    <span class="contact-icon">📧</span>
-                    <h3>Bulk Registrations</h3>
-                    <a href="mailto:Registrations@thecapitalrun.com">Registrations@thecapitalrun.com</a>
+            <div class="contact-grid">
+                <div class="contact-card orange">
+                    <div class="contact-icon-box orange">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Bulk Registrations</h3>
+                        <p>For bulk registrations, write to:</p>
+                        <a href="mailto:Registrations@thecapitalrun.com">Registrations@thecapitalrun.com</a>
+                    </div>
                 </div>
-                <div class="contact-card">
-                    <span class="contact-icon">🤝</span>
-                    <h3>Sponsorship Enquiries</h3>
-                    <a href="mailto:Sponsorship@thecapitalrun.com">Sponsorship@thecapitalrun.com</a>
+                <div class="contact-card green">
+                    <div class="contact-icon-box green">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Sponsorship Enquiries</h3>
+                        <p>For sponsorship enquiries, write to:</p>
+                        <a href="mailto:Sponsorship@thecapitalrun.com">Sponsorship@thecapitalrun.com</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -393,59 +684,106 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>The Capital Run</h3>
-                    <p>India's purpose-driven marathon combining fitness, technology, and sustainability.</p>
+                <div class="footer-col">
+                    <h3 class="footer-brand">The Capital Run</h3>
+                    <p>India's purpose-driven marathon where fitness, innovation, and sustainability unite.</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>📧 info@thecapitalrun.com</p>
-                    <p>📞 +91 98765 43210</p>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div>
+                                <p class="label">Email</p>
+                                <a href="mailto:info@thecapitalrun.com">info@thecapitalrun.com</a>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <div>
+                                <p class="label">Event Helpline</p>
+                                <a href="tel:+911234567890">+91 123 456 7890</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h3>Venue</h3>
-                    <p>📍 Jawaharlal Nehru Stadium</p>
-                    <p>New Delhi, India</p>
+                <div class="footer-col">
+                    <h4>Venue</h4>
+                    <div class="footer-venue">
+                        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <p>Jawaharlal Nehru Stadium<br>Pragati Vihar, Lodhi Road<br>New Delhi - 110003</p>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
                     <div class="social-links">
-                        <a href="#">Facebook</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">LinkedIn</a>
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2025 The Capital Run. All rights reserved.</p>
-                <p>Powered by <strong>UTHO</strong></p>
+                <div class="powered-by">
+                    <span>Powered by</span>
+                    <span class="utho">UTHO</span>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- Registration Modal -->
-    <div class="modal" id="registrationModal">
-        <div class="modal-content">
+    <div class="modal-overlay" id="registrationModal">
+        <div class="modal">
             <button class="modal-close" onclick="closeRegistrationModal()">×</button>
             <h2>Register for The Capital Run</h2>
-            <form id="registrationForm" onsubmit="submitRegistration(event)">
+            <form id="registrationForm" onsubmit="handleRegistration(event)">
                 <div class="form-group">
                     <label for="fullName">Full Name *</label>
-                    <input type="text" id="fullName" name="fullName" required>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
                 </div>
                 <div class="form-group">
                     <label for="category">Race Category *</label>
                     <select id="category" name="category" required>
-                        <option value="">Select Category</option>
+                        <option value="">Select a category</option>
                         <option value="21km">21 KM Half Marathon - ₹999</option>
                         <option value="10km">10 KM Impact Run - ₹749</option>
                         <option value="5km">5 KM Speed Run - ₹499</option>
@@ -453,29 +791,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="age">Age *</label>
-                    <input type="number" id="age" name="age" min="1" max="100" required>
-                </div>
-                <div class="form-group">
-                    <label for="gender">Gender *</label>
-                    <select id="gender" name="gender" required>
-                        <option value="">Select Gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="tshirtSize">T-Shirt Size *</label>
-                    <select id="tshirtSize" name="tshirtSize" required>
-                        <option value="">Select Size</option>
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                        <option value="XXL">XXL</option>
-                    </select>
+                    <label for="age">Age (as on 1 March 2026) *</label>
+                    <input type="number" id="age" name="age" required min="5" max="100" placeholder="Enter your age">
                 </div>
                 <div class="form-group checkbox">
                     <input type="checkbox" id="terms" name="terms" required>
