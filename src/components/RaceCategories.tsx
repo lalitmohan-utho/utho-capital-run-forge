@@ -100,10 +100,6 @@ const RaceCategories = () => {
                   <p className="text-lg font-bold text-primary">{category.earlyBirdPrice}</p>
                   <p className="text-xs text-muted-foreground">Super early bird till 31 December 2025 – save 50%</p>
                 </div>
-
-                <Button variant="outline" className="w-full group-hover:border-primary group-hover:text-primary">
-                  Know More
-                </Button>
               </div>
             </Card>
           ))}
