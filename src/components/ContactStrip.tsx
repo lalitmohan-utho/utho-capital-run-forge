@@ -24,10 +24,10 @@ const ContactStrip = () => {
                   For bulk registrations, write to:
                 </p>
                 <a
-                  href="mailto:Registrations@thecapitalrun.com"
+                  href="mailto:thecapitalrun@utho.com"
                   className="text-primary font-semibold hover:underline"
                 >
-                  Registrations@thecapitalrun.com
+                  thecapitalrun@utho.com
                 </a>
               </div>
             </div>
@@ -44,10 +44,10 @@ const ContactStrip = () => {
                   For sponsorship enquiries, write to:
                 </p>
                 <a
-                  href="mailto:Sponsorship@thecapitalrun.com"
+                  href="mailto:sponsership.tcr@utho.com"
                   className="text-accent font-semibold hover:underline"
                 >
-                  Sponsorship@thecapitalrun.com
+                  sponsership.tcr@utho.com
                 </a>
               </div>
             </div>
