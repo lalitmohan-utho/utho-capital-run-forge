@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Capital Run – Powered by Utho | Running Towards Innovation</title>
+    <meta name="description" content="Join India's purpose-driven marathon on 14 December 2025 at Jawaharlal Nehru Stadium, New Delhi. Where fitness meets technology and passion meets purpose.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="https://whfiseivcoehtlsfvtts.supabase.co/storage/v1/object/public/assets/capital-run-logo.png" alt="The Capital Run Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span style="display:none; font-weight: 800; font-size: 1.25rem; color: #f97316;">THE CAPITAL RUN</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" onclick="scrollToSection('about')">About</a>
+                <a href="#categories" onclick="scrollToSection('categories')">Categories</a>
+                <a href="#sustainability" onclick="scrollToSection('sustainability')">Sustainability</a>
+                <a href="#sponsors" onclick="scrollToSection('sponsors')">Sponsors</a>
+                <a href="#faq" onclick="scrollToSection('faq')">FAQ</a>
+            </div>
+            <button class="register-btn" onclick="openRegistrationModal()">Register Now</button>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="scrollToSection('about'); toggleMobileMenu();">About</a>
+        <a href="#categories" onclick="scrollToSection('categories'); toggleMobileMenu();">Categories</a>
+        <a href="#sustainability" onclick="scrollToSection('sustainability'); toggleMobileMenu();">Sustainability</a>
+        <a href="#sponsors" onclick="scrollToSection('sponsors'); toggleMobileMenu();">Sponsors</a>
+        <a href="#faq" onclick="scrollToSection('faq'); toggleMobileMenu();">FAQ</a>
+        <button class="register-btn" onclick="openRegistrationModal(); toggleMobileMenu();">Register Now</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-tagline">Running Towards Innovation</p>
+            <h1 class="hero-title">THE CAPITAL RUN</h1>
+            <p class="hero-subtitle">Powered by UTHO</p>
+            <div class="hero-details">
+                <p>📅 1 March 2026</p>
+                <p>📍 Jawaharlal Nehru Stadium, New Delhi</p>
+            </div>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="openRegistrationModal()">Register Now</button>
+                <a href="The_Capital_Run.pdf" download class="btn-secondary">Download Brochure</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Run With Us -->
+    <section class="why-run" id="about">
+        <div class="container">
+            <h2 class="section-title">Why Run With Us?</h2>
+            <p class="section-subtitle">More than a race – a movement combining fitness, technology, and purpose</p>
+            <div class="reasons-grid">
+                <div class="reason-card" style="--accent-color: #f97316;">
+                    <div class="reason-icon">🏃</div>
+                    <span class="reason-number">01</span>
+                    <h3>Purpose-Driven</h3>
+                    <p>Every step you take contributes to a greater cause. Run for innovation, sustainability, and community impact.</p>
+                </div>
+                <div class="reason-card" style="--accent-color: #22c55e;">
+                    <div class="reason-icon">🌱</div>
+                    <span class="reason-number">02</span>
+                    <h3>Eco-Friendly</h3>
+                    <p>India's greenest marathon with zero-waste initiatives, recyclable materials, and carbon offset programs.</p>
+                </div>
+                <div class="reason-card" style="--accent-color: #3b82f6;">
+                    <div class="reason-icon">💡</div>
+                    <span class="reason-number">03</span>
+                    <h3>Tech-Powered</h3>
+                    <p>Experience cutting-edge timing systems, real-time tracking, and AI-powered race insights.</p>
+                </div>
+                <div class="reason-card" style="--accent-color: #a855f7;">
+                    <div class="reason-icon">🎯</div>
+                    <span class="reason-number">04</span>
+                    <h3>World-Class Experience</h3>
+                    <p>Premium race kits, professional photography, live entertainment, and celebration zones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Race Categories -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Race Categories</h2>
+            <p class="section-subtitle">Choose your challenge – from elite runners to first-timers</p>
+            <div class="categories-grid">
+                <div class="category-card featured">
+                    <div class="category-badge">Most Popular</div>
+                    <div class="category-icon">🏅</div>
+                    <h3>21 KM</h3>
+                    <p class="category-name">Half Marathon</p>
+                    <p class="category-age">Age: 18+ years</p>
+                    <p class="category-time">Start: 5:00 AM</p>
+                    <div class="category-pricing">
+                        <span class="original-price">₹1,999</span>
+                        <span class="discounted-price">₹999</span>
+                    </div>
+                    <p class="early-bird">Super Early Bird - Save 50%</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎯</div>
+                    <h3>10 KM</h3>
+                    <p class="category-name">Impact Run</p>
+                    <p class="category-age">Age: 15+ years</p>
+                    <p class="category-time">Start: 6:00 AM</p>
+                    <div class="category-pricing">
+                        <span class="original-price">₹1,499</span>
+                        <span class="discounted-price">₹749</span>
+                    </div>
+                    <p class="early-bird">Super Early Bird - Save 50%</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">⚡</div>
+                    <h3>5 KM</h3>
+                    <p class="category-name">Speed Run</p>
+                    <p class="category-age">Age: 12+ years</p>
+                    <p class="category-time">Start: 6:30 AM</p>
+                    <div class="category-pricing">
+                        <span class="original-price">₹999</span>
+                        <span class="discounted-price">₹499</span>
+                    </div>
+                    <p class="early-bird">Super Early Bird - Save 50%</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎉</div>
+                    <h3>2.5 KM</h3>
+                    <p class="category-name">Fun Run</p>
+                    <p class="category-age">Age: All ages</p>
+                    <p class="category-time">Start: 7:00 AM</p>
+                    <div class="category-pricing">
+                        <span class="original-price">₹799</span>
+                        <span class="discounted-price">₹399</span>
+                    </div>
+                    <p class="early-bird">Super Early Bird - Save 50%</p>
+                </div>
+            </div>
+            <div class="register-section">
+                <button class="btn-primary large" onclick="openRegistrationModal()">Register Now</button>
+                <p class="offer-text">Early bird offer valid till 31 December 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability -->
+    <section class="sustainability" id="sustainability">
+        <div class="container">
+            <h2 class="section-title">Run Clean, Run Green</h2>
+            <p class="section-subtitle">Our commitment to a sustainable future</p>
+            <div class="pledges-grid">
+                <div class="pledge-card">
+                    <div class="pledge-icon">♻️</div>
+                    <h3>Zero Waste</h3>
+                    <p>100% recyclable race materials and zero single-use plastics throughout the event.</p>
+                </div>
+                <div class="pledge-card">
+                    <div class="pledge-icon">🌳</div>
+                    <h3>Carbon Neutral</h3>
+                    <p>We offset all carbon emissions through tree plantation and renewable energy initiatives.</p>
+                </div>
+                <div class="pledge-card">
+                    <div class="pledge-icon">💧</div>
+                    <h3>Water Conservation</h3>
+                    <p>Eco-friendly hydration stations with paper cups and water refill points.</p>
+                </div>
+                <div class="pledge-card">
+                    <div class="pledge-icon">🚲</div>
+                    <h3>Green Transport</h3>
+                    <p>Encouraging public transport and providing cycling parking at the venue.</p>
+                </div>
+            </div>
+            <div class="green-commitment">
+                <h3>🌿 Our Green Commitment</h3>
+                <p>The Capital Run is committed to being India's most environmentally responsible marathon. We aim for zero waste to landfill, with all materials being recycled, composted, or repurposed. Join us in running towards a greener future.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Race Experience -->
+    <section class="experience">
+        <div class="container">
+            <h2 class="section-title">Race Day Experience</h2>
+            <p class="section-subtitle">World-class amenities for every runner</p>
+            <div class="features-grid">
+                <div class="feature-item">⏱️ Chip Timing System</div>
+                <div class="feature-item">📸 Professional Photography</div>
+                <div class="feature-item">🚑 Medical Support</div>
+                <div class="feature-item">💧 Hydration Stations</div>
+                <div class="feature-item">🎵 Live Entertainment</div>
+                <div class="feature-item">🏥 Physio Support</div>
+                <div class="feature-item">🎒 Baggage Counter</div>
+                <div class="feature-item">🍌 Energy Stations</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finish Line -->
+    <section class="finish-line">
+        <div class="container">
+            <h2 class="section-title">Finish Line Celebration</h2>
+            <p class="section-subtitle">Every finisher is a champion</p>
+            <div class="perks-grid">
+                <div class="perk-card">
+                    <div class="perk-icon">🏅</div>
+                    <h3>Finisher Medal</h3>
+                    <p>Premium custom-designed medal for all finishers</p>
+                </div>
+                <div class="perk-card">
+                    <div class="perk-icon">👕</div>
+                    <h3>Race T-Shirt</h3>
+                    <p>Exclusive event t-shirt in your race kit</p>
+                </div>
+                <div class="perk-card">
+                    <div class="perk-icon">📜</div>
+                    <h3>E-Certificate</h3>
+                    <p>Digital certificate with your official timing</p>
+                </div>
+            </div>
+            <div class="highlights">
+                <h3>Event Highlights</h3>
+                <ul>
+                    <li>✓ Live DJ & Entertainment</li>
+                    <li>✓ Photo Booth</li>
+                    <li>✓ Recovery Zone</li>
+                    <li>✓ Food Court</li>
+                    <li>✓ Award Ceremony</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors -->
+    <section class="sponsors" id="sponsors">
+        <div class="container">
+            <h2 class="section-title">Our Partners</h2>
+            <p class="section-subtitle">Backed by industry leaders</p>
+            <div class="sponsor-tiers">
+                <div class="sponsor-tier">
+                    <h3>Title Sponsor</h3>
+                    <div class="sponsor-logo large">UTHO</div>
+                </div>
+                <div class="sponsor-tier">
+                    <h3>Gold Sponsors</h3>
+                    <div class="sponsor-logos">
+                        <div class="sponsor-logo">Partner 1</div>
+                        <div class="sponsor-logo">Partner 2</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sponsor-cta">
+                <h3>Become a Sponsor</h3>
+                <p>Partner with India's most innovative marathon</p>
+                <a href="Sponsorship_Deck.pdf" download class="btn-secondary">Download Sponsorship Deck</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Registration -->
+    <section class="team-registration">
+        <div class="container">
+            <h2 class="section-title">Run Together. Build Together.</h2>
+            <p class="section-subtitle">Special packages for corporate teams and running groups</p>
+            <div class="team-benefits">
+                <div class="benefit">
+                    <span class="benefit-icon">👥</span>
+                    <h3>Team Discounts</h3>
+                    <p>Special pricing for groups of 10+</p>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">🎽</span>
+                    <h3>Custom Bibs</h3>
+                    <p>Personalized race bibs with company logo</p>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">🏢</span>
+                    <h3>Corporate Packages</h3>
+                    <p>VIP hospitality and branding opportunities</p>
+                </div>
+            </div>
+            <button class="btn-primary large" onclick="openRegistrationModal()">Register Your Team</button>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How do I register for the race?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Click the "Register Now" button on this page to access our registration form. You'll need to provide your personal details, select your race category, and complete the payment. You'll receive a confirmation email with your registration details.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What is included in the registration fee?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your registration includes: Race bib with timing chip, event t-shirt, finisher medal, e-certificate, access to hydration stations, baggage counter service, and post-race refreshments.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Where and when do I collect my race kit?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Race kit collection (Expo) will be held on 28-29 February 2026 at the Jawaharlal Nehru Stadium. You must bring a valid photo ID and your registration confirmation to collect your kit. Kits cannot be collected on race day.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Can I transfer my registration to someone else?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, registration transfers are allowed until 15 February 2026. A transfer fee of ₹200 applies. Please contact us at Registrations@thecapitalrun.com for transfer requests.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What are the cut-off times for each category?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cut-off times: 21 KM - 3.5 hours, 10 KM - 2 hours, 5 KM - 1 hour, 2.5 KM - 45 minutes. Participants who exceed the cut-off time will be required to move to the footpath and may not receive official timing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Strip -->
+    <section class="contact-strip">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">For registrations and partnerships</p>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <span class="contact-icon">📧</span>
+                    <h3>Bulk Registrations</h3>
+                    <a href="mailto:Registrations@thecapitalrun.com">Registrations@thecapitalrun.com</a>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">🤝</span>
+                    <h3>Sponsorship Enquiries</h3>
+                    <a href="mailto:Sponsorship@thecapitalrun.com">Sponsorship@thecapitalrun.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>The Capital Run</h3>
+                    <p>India's purpose-driven marathon combining fitness, technology, and sustainability.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 info@thecapitalrun.com</p>
+                    <p>📞 +91 98765 43210</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Venue</h3>
+                    <p>📍 Jawaharlal Nehru Stadium</p>
+                    <p>New Delhi, India</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 The Capital Run. All rights reserved.</p>
+                <p>Powered by <strong>UTHO</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div class="modal" id="registrationModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeRegistrationModal()">×</button>
+            <h2>Register for The Capital Run</h2>
+            <form id="registrationForm" onsubmit="submitRegistration(event)">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Race Category *</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="21km">21 KM Half Marathon - ₹999</option>
+                        <option value="10km">10 KM Impact Run - ₹749</option>
+                        <option value="5km">5 KM Speed Run - ₹499</option>
+                        <option value="2.5km">2.5 KM Fun Run - ₹399</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" name="age" min="1" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender *</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tshirtSize">T-Shirt Size *</label>
+                    <select id="tshirtSize" name="tshirtSize" required>
+                        <option value="">Select Size</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the terms and conditions *</label>
+                </div>
+                <button type="submit" class="btn-primary full-width">Complete Registration</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
