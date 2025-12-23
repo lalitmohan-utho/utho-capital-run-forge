@@ -10,10 +10,12 @@ import TeamRegistration from "@/components/TeamRegistration";
 import FAQ from "@/components/FAQ";
 import ContactStrip from "@/components/ContactStrip";
 import Footer from "@/components/Footer";
+import DownloadSection from "@/components/DownloadSection";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <DownloadSection />
       <Navbar />
       <Hero />
       <WhyRunWithUs />
