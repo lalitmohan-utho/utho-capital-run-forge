@@ -1,6 +1,9 @@
-import { Download } from "lucide-react";
+import { Download, FolderArchive } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import JSZip from "jszip";
+import { saveAs } from "file-saver";
+import { useState } from "react";
 
 const files = [
   { name: "index.html", path: "/static-site/index.html", label: "HTML File" },
@@ -13,6 +16,30 @@ const files = [
 ];
 
 const DownloadSection = () => {
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const downloadAllAsZip = async () => {
+    setIsDownloading(true);
+    try {
+      const zip = new JSZip();
+      
+      await Promise.all(
+        files.map(async (file) => {
+          const response = await fetch(file.path);
+          const blob = await response.blob();
+          zip.file(file.name, blob);
+        })
+      );
+
+      const content = await zip.generateAsync({ type: "blob" });
+      saveAs(content, "capital-run-static-site.zip");
+    } catch (error) {
+      console.error("Error creating ZIP:", error);
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
   return (
     <section className="py-16 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4">
@@ -23,6 +50,16 @@ const DownloadSection = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Download all files below and place them in the same folder. Open index.html in a browser to run the site.
           </p>
+          
+          <Button
+            size="lg"
+            className="mt-6"
+            onClick={downloadAllAsZip}
+            disabled={isDownloading}
+          >
+            <FolderArchive className="mr-2 h-5 w-5" />
+            {isDownloading ? "Creating ZIP..." : "Download All as ZIP"}
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-5xl mx-auto">
